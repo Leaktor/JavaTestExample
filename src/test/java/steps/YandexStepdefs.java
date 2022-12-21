@@ -1,3 +1,5 @@
+package steps;
+
 import Pages.CommonActions;
 import Pages.YandexMainPage;
 import io.cucumber.java.ru.Дано;

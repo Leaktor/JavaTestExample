@@ -1,6 +1,6 @@
 import com.codeborne.selenide.logevents.SelenideLogger;
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.AfterClass;
@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/java/features",
+        features = "src/test/features",
         glue = "steps",
         tags = "@test"
 )
@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
 public class RunTest {
     @BeforeClass
     public static void startApp() {
-        WebDriverManager.chromedriver().browserVersion("106").setup();
+        WebDriverManager.chromedriver().browserVersion("108").setup();
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
     }
 
