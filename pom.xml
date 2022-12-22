@@ -17,11 +17,11 @@
         <maven.surefire.plugin.version>3.0.0-M5</maven.surefire.plugin.version>
         <maven.project.info.reports.plugin.version>3.1.1</maven.project.info.reports.plugin.version>
         <maven.site.plugin.version>3.9.1</maven.site.plugin.version>
-        <slf4j.version>1.8.0-beta4</slf4j.version>
+        <slf4j.version>2.0.6</slf4j.version>
         <appium.java.client.version>7.3.0</appium.java.client.version>
         <allure.maven.version>2.10.0</allure.maven.version>
-        <aspectj.version>1.8.13</aspectj.version>
-        <allure.version>2.13.6</allure.version>
+        <aspectj.version>1.9.9.1</aspectj.version>
+        <allure.version>2.20.1</allure.version>
     </properties>
     <dependencies>
         <dependency>
@@ -58,6 +58,12 @@
 
         <dependency>
             <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-java-commons</artifactId>
+            <version>2.20.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
             <artifactId>allure-junit4</artifactId>
             <version>2.20.1</version>
             <scope>test</scope>
@@ -68,6 +74,12 @@
             <artifactId>allure-selenide</artifactId>
             <version>${allure.version}</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-cucumber-jvm</artifactId>
+            <version>2.20.1</version>
         </dependency>
     </dependencies>
     <build>
